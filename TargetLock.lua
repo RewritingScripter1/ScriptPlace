@@ -8,11 +8,11 @@ local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
 
 -- Settings
 local settings = {
-    guiDuration = 5,  -- Total duration for the entire GUI before it gets destroyed
+    guiDuration = 3,  -- Total duration for the entire GUI before it gets destroyed
     mainText = "Evolution.cc",  -- Custom main text
     loadingText = "Executing Evolution",  -- Custom loading text
-    loadedText = "Executed Evolution",  -- Custom loaded text
-    creditsText = "Release by @1sanitysieloisa",  -- Custom credits text
+    loadedText = "Evolution Has Executed",  -- Custom loaded text
+    creditsText = "Official Lock",  -- Custom credits text
     fontSettings = {
         mainTextFont = Enum.Font.Arcade,  -- Font for main text
         creditsFont = Enum.Font.Arcade,  -- Font for credits text
@@ -144,7 +144,7 @@ screenGui:Destroy()
 blurEffect:Destroy()
 
 --put that code on top of your script
-wait(2)
+wait(1.5)
 -- paste your code below this
 
 local userInputService = game:GetService("UserInputService")
@@ -371,11 +371,11 @@ local function CreateButton(name, defaultPosition, callback)
     Button.Position = savedPositions[name] and UDim2.new(0, savedPositions[name].X, 0, savedPositions[name].Y) or defaultPosition
     Button.Text = name
     Button.Parent = ScreenGui
-    Button.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+    Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     Button.BorderSizePixel = 0
     Button.Font = Enum.Font.Arcade
-    Button.TextColor3 = Color3.new(255, 255, 255)
-    Button.TextSize = 15
+    Button.TextColor3 = Color3.new(0, 0, 0)
+    Button.TextSize = 17
     Button.AutoButtonColor = false
 
     local Corner = Instance.new("UICorner")
@@ -383,9 +383,9 @@ local function CreateButton(name, defaultPosition, callback)
     Corner.Parent = Button
 
     local Shadow = Instance.new("Frame")
-    Shadow.Size = UDim2.new(1, 6, 1, 6)
+    Shadow.Size = UDim2.new(1.2, 6, 1.2, 6)
     Shadow.Position = UDim2.new(0, -3, 0, -3)
-    Shadow.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+    Shadow.BackgroundColor3 = Color3.fromRGB(150, 150, 150)
     Shadow.BackgroundTransparency = 0.7
     Shadow.ZIndex = -1
     Shadow.Parent = Button
@@ -397,7 +397,7 @@ local function CreateButton(name, defaultPosition, callback)
     local isActive = false
 
     local function updateButtonState()
-        local targetColor = isActive and Color3.fromRGB(255, 0, 0) or Color3.fromRGB(0, 0, 255)
+        local targetColor = isActive and Color3.fromRGB(0, 0, 255) or Color3.fromRGB(255, 0, 0)
         local tweenInfo = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
         local tween = game:GetService("TweenService"):Create(Shadow, tweenInfo, {BackgroundColor3 = targetColor})
         tween:Play()
