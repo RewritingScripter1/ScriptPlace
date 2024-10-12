@@ -383,7 +383,7 @@ local function CreateButton(name, defaultPosition, callback)
     Corner.Parent = Button
 
     local Shadow = Instance.new("Frame")
-    Shadow.Size = UDim2.new(1.2, 6, 1.2, 6)
+    Shadow.Size = UDim2.new(1.05, 6, 1.05, 6)
     Shadow.Position = UDim2.new(0, -3, 0, -3)
     Shadow.BackgroundColor3 = Color3.fromRGB(150, 150, 150)
     Shadow.BackgroundTransparency = 0.7
