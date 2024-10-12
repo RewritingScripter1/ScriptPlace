@@ -374,7 +374,7 @@ local function CreateButton(name, defaultPosition, callback)
     Button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     Button.BorderSizePixel = 0
     Button.Font = Enum.Font.Arcade
-    Button.TextColor3 = Color3.new(0, 0, 0)
+    Button.TextColor3 = Color3.new(255, 255, 255)
     Button.TextSize = 15
     Button.AutoButtonColor = false
 
@@ -397,7 +397,7 @@ local function CreateButton(name, defaultPosition, callback)
     local isActive = false
 
     local function updateButtonState()
-        local targetColor = isActive and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(0, 0, 0)
+        local targetColor = isActive and Color3.fromRGB(170, 170, 170) or Color3.fromRGB(255, 255, 255)
         local tweenInfo = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
         local tween = game:GetService("TweenService"):Create(Shadow, tweenInfo, {BackgroundColor3 = targetColor})
         tween:Play()
