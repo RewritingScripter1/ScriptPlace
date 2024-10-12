@@ -371,7 +371,7 @@ local function CreateButton(name, defaultPosition, callback)
     Button.Position = savedPositions[name] and UDim2.new(0, savedPositions[name].X, 0, savedPositions[name].Y) or defaultPosition
     Button.Text = name
     Button.Parent = ScreenGui
-    Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Button.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     Button.BorderSizePixel = 0
     Button.Font = Enum.Font.Arcade
     Button.TextColor3 = Color3.new(255, 255, 255)
@@ -397,7 +397,7 @@ local function CreateButton(name, defaultPosition, callback)
     local isActive = false
 
     local function updateButtonState()
-        local targetColor = isActive and Color3.fromRGB(10, 10, 10) or Color3.fromRGB(10, 10, 10)
+        local targetColor = isActive and Color3.fromRGB(255, 0, 0) or Color3.fromRGB(0, 0, 255)
         local tweenInfo = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
         local tween = game:GetService("TweenService"):Create(Shadow, tweenInfo, {BackgroundColor3 = targetColor})
         tween:Play()
