@@ -371,7 +371,7 @@ local function CreateButton(name, defaultPosition, callback)
     Button.Position = savedPositions[name] and UDim2.new(0, savedPositions[name].X, 0, savedPositions[name].Y) or defaultPosition
     Button.Text = name
     Button.Parent = ScreenGui
-    Button.BackgroundColor3 = Color3.fromRGB(255, 20, 255)
+    Button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     Button.BorderSizePixel = 0
     Button.Font = Enum.Font.Arcade
     Button.TextColor3 = Color3.new(0, 0, 0)
