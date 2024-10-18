@@ -1327,8 +1327,6 @@ TextButton.BackgroundTransparency = 1
 TextButton.Font = Enum.Font.Arcade
 TextButton.Size = UDim2.new(0.2, 0, 0.2, 0)
 TextButton.Position = UDim2.new(0, 0.9, 0.3, 1)
-local state = true
-TextButton.MouseButton1Click:Connect(function()
 
 end)
 
