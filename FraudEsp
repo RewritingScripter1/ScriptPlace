@@ -13,15 +13,15 @@ local ESP = {
     Options = { 
         Teamcheck = true, TeamcheckRGB = Color3.fromRGB(0, 255, 0),
         Friendcheck = true, FriendcheckRGB = Color3.fromRGB(0, 255, 0),
-        Highlight = true, HighlightRGB = Color3.fromRGB(255, 0, 0),
+        Highlight = true, HighlightRGB = Color3.fromRGB(255, 255, 255),
     },
     Drawing = {
         Chams = {
             Enabled  = true,
             Thermal = true,
-            FillRGB = Color3.fromRGB(170, 20, 255),
+            FillRGB = Color3.fromRGB(0, 0, 0),
             Fill_Transparency = 100,
-            OutlineRGB = Color3.fromRGB(170, 20, 255),
+            OutlineRGB = Color3.fromRGB(255, 255, 255),
             Outline_Transparency = 100,
             VisibleCheck = true,
         },
